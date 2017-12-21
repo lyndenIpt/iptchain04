@@ -50,6 +50,18 @@ func showDefaultAccountInfo(wallet account.Client) {
 	}
 }
 
+func showPrivateKeysInfo(wallet account.Client) {
+	accounts := wallet.GetAccounts()
+	fmt.Println(" ID   Address\t\t\t\t Public Key\t\t\t\t\t\t\t    Private Key")
+	fmt.Println("----  -------\t\t\t\t ----------\t\t\t\t\t\t\t    ----------")
+	for i, account := range accounts {
+		address, _ := account.ProgramHash.ToAddress()
+		publicKey, _  := account.PublicKey.EncodePoint(true)
+		privateKey := account.PrivateKey
+		fmt.Printf("%4s  %s %s %s\n", strconv.Itoa(i), address, BytesToHexString(publicKey), BytesToHexString(privateKey))
+	}
+}
+
 func showMultisigInfo(wallet account.Client) {
 	contracts := wallet.GetContracts()
 	accounts := wallet.GetAccounts()
@@ -248,8 +260,8 @@ func walletAction(c *cli.Context) error {
 
 	// list wallet info
 	if item := c.String("list"); item != "" {
-		if item != "account" && item != "mainaccount" && item != "balance" && item != "verbose" && item != "multisig" && item != "height" {
-			fmt.Fprintln(os.Stderr, "--list [account | balance | verbose | multisig | height]")
+		if item != "account" && item != "mainaccount" && item != "privatekey" && item != "balance" && item != "verbose" && item != "multisig" && item != "height" {
+			fmt.Fprintln(os.Stderr, "--list [account | mainaccount| privatekey | balance | verbose | multisig | height]")
 			os.Exit(1)
 		} else {
 			wallet, err := account.Open(name, getPassword(passwd))
@@ -262,6 +274,8 @@ func walletAction(c *cli.Context) error {
 				showAccountsInfo(wallet)
 			case "mainaccount":
 				showDefaultAccountInfo(wallet)
+			case "privatekey":
+				showPrivateKeysInfo(wallet)
 			case "balance":
 				showBalancesInfo(wallet)
 			case "verbose":
@@ -412,7 +426,7 @@ func NewCommand() *cli.Command {
 			},
 			cli.StringFlag{
 				Name:  "list, l",
-				Usage: "list wallet information [account, mainaccount, balance, verbose, multisig, height]",
+				Usage: "list wallet information [account, mainaccount, privatekey, balance, verbose, multisig, height]",
 			},
 			cli.IntFlag{
 				Name:  "addaccount",
