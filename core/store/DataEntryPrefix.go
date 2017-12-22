@@ -20,12 +20,13 @@ const (
 	// ASSET
 	ST_Info           DataEntryPrefix = 0xc0
 	ST_QuantityIssued DataEntryPrefix = 0xc1
-	ST_Contract       DataEntryPrefix = 0xc2
-	ST_Storage        DataEntryPrefix = 0xc3
-	ST_ACCOUNT        DataEntryPrefix = 0xc4
-	ST_AssetState     DataEntryPrefix = 0xc5
-	ST_Validator      DataEntryPrefix = 0xc6
-	ST_Locked         DataEntryPrefix = 0xc7
+	ST_ACCOUNT        DataEntryPrefix = 0xc2
+	ST_Locked         DataEntryPrefix = 0xc3
+	ST_Contract       DataEntryPrefix = 0xc4
+	ST_Storage        DataEntryPrefix = 0xc5
+	ST_AssetState     DataEntryPrefix = 0xc6
+	ST_Validator      DataEntryPrefix = 0xc7
+	ST_Record         DataEntryPrefix = 0xc8
 	//SYSTEM
 	SYS_CurrentBlock DataEntryPrefix = 0x40
 	// SYS_CurrentHeader     DataEntryPrefix = 0x41
