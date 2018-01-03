@@ -52,6 +52,9 @@ type ILedgerStore interface {
 	GetAvailableAsset(programHash Uint160, assetid Uint256) (Fixed64, Fixed64, error)
 	GetAssets() map[Uint256]*Asset
 
+	SaveRecord(hash string, txhash Uint256) error
+	GetRecord(filehash string) (Uint256, error)
+
 	IsTxHashDuplicate(txhash Uint256) bool
 	IsBlockInStore(hash Uint256) bool
 	Close()

@@ -1,14 +1,6 @@
 package ChainStore
 
 import (
-	"bytes"
-	"errors"
-	"fmt"
-	"math/big"
-	"sort"
-	"sync"
-	"time"
-
 	. "DNA/common"
 	"DNA/common/log"
 	"DNA/common/serialization"
@@ -23,11 +15,20 @@ import (
 	"DNA/core/validation"
 	"DNA/crypto"
 	"DNA/events"
+	. "DNA/net/httprestful/common"
 	. "DNA/net/httprestful/error"
 	"DNA/net/httpwebsocket"
 	"DNA/smartcontract"
 	"DNA/smartcontract/service"
 	"DNA/smartcontract/states"
+	"bytes"
+	"encoding/json"
+	"errors"
+	"fmt"
+	"math/big"
+	"sort"
+	"sync"
+	"time"
 )
 
 const (
@@ -623,6 +624,40 @@ func (bd *ChainStore) SaveTransaction(tx *tx.Transaction, height uint32) error {
 	return nil
 }
 
+func (bd *ChainStore) GetRecord(filehash string) (Uint256, error) {
+	prefix := []byte{byte(ST_Record)}
+	bytesHash, err_get := bd.st.Get(append(prefix, []byte(filehash)...))
+
+	if err_get != nil {
+		return Uint256{}, err_get
+	}
+
+	hash, err_parse := Uint256ParseFromBytes(bytesHash)
+	if err_parse != nil {
+		return Uint256{}, err_parse
+	}
+
+	return hash, nil
+}
+
+func (bd *ChainStore) SaveRecord(hash string, txhash Uint256) error {
+
+	key := bytes.NewBuffer(nil)
+	key.WriteByte(byte(ST_Record))
+	key.WriteString(hash)
+
+	value := bytes.NewBuffer(nil)
+	if _, err := txhash.Serialize(value); err != nil {
+		return err
+	}
+
+	if err := bd.st.BatchPut(key.Bytes(), value.Bytes()); err != nil {
+		return err
+	}
+
+	return nil
+}
+
 func (bd *ChainStore) GetBlock(hash Uint256) (*Block, error) {
 	bd.mu.RLock()
 	if block, ok := bd.blockCache[hash]; ok {
@@ -944,7 +979,21 @@ func (bd *ChainStore) persist(b *Block) error {
 			}
 			stateMachine.CloneCache.Commit()
 			httpwebsocket.PushResult(txHash, 0, INVOKE_TRANSACTION, ret)
+
+		case tx.Record:
+			recordpayload := b.Transactions[i].Payload.(*payload.Record).RecordData
+
+			tmp := &RecordData{}
+			if err := json.Unmarshal(recordpayload, tmp); err != nil {
+				continue
+			}
+
+			err = bd.SaveRecord(tmp.Data.Hash, txHash)
+			if err != nil {
+				continue
+			}
 		}
+
 		for index := 0; index < len(b.Transactions[i].Outputs); index++ {
 			output := b.Transactions[i].Outputs[index]
 			programHash := output.ProgramHash

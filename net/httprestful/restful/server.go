@@ -57,6 +57,8 @@ const (
 	Api_WebsocketState      = "/api/v1/config/websocket/state"
 	Api_Restart             = "/api/v1/restart"
 	Api_GetContract         = "/api/v1/contract/:hash"
+	Api_GetRecordByHash     = "/api/v1/custom/record/:hash"
+	Api_GetRecordByFileHash = "/api/v1/custom/file/:hash"
 )
 
 func InitRestServer(checkAccessToken func(string, string) (string, int64, interface{})) ApiServer {
@@ -157,6 +159,8 @@ func (rt *restServer) registryMethod() {
 		Api_NoticeServerUrl:     {name: "getnoticeserverurl", handler: GetNoticeServerUrl},
 		Api_Restart:             {name: "restart", handler: rt.Restart},
 		Api_GetStateUpdate:      {name: "getstateupdate", handler: GetStateUpdate},
+		Api_GetRecordByHash:     {name: "getrecord", handler: GetRecordByHash},
+		Api_GetRecordByFileHash: {name: "getrecordbyfile", handler: GetRecordByFileHash},
 	}
 
 	sendRawTransaction := func(cmd map[string]interface{}) map[string]interface{} {
@@ -171,7 +175,7 @@ func (rt *restServer) registryMethod() {
 	}
 	postMethodMap := map[string]Action{
 		Api_SendRawTx:         {name: "sendrawtransaction", handler: sendRawTransaction},
-		Api_SendRcdTxByTrans:  {name: "sendrecord", handler: SendRecord},
+		Api_SendRcdTxByTrans:  {name: "sendrecord", handler: SendRecordTransaction},
 		Api_OauthServerUrl:    {name: "setoauthserverurl", handler: SetOauthServerUrl},
 		Api_NoticeServerUrl:   {name: "setnoticeserverurl", handler: SetNoticeServerUrl},
 		Api_NoticeServerState: {name: "setpostblock", handler: SetPushBlockFlag},
@@ -210,6 +214,10 @@ func (rt *restServer) getPath(url string) string {
 		return Api_Getasset
 	} else if strings.Contains(url, strings.TrimRight(Api_GetStateUpdate, ":namespace/:key")) {
 		return Api_GetStateUpdate
+	} else if strings.Contains(url, strings.TrimRight(Api_GetRecordByHash, ":namespace/:hash")) {
+		return Api_GetRecordByHash
+	} else if strings.Contains(url, strings.TrimRight(Api_GetRecordByFileHash, ":namespace/:hash")) {
+		return Api_GetRecordByFileHash
 	}
 	return url
 }
@@ -281,6 +289,12 @@ func (rt *restServer) getParams(r *http.Request, url string, req map[string]inte
 		req["Namespace"] = getParam(r, "namespace")
 		req["Key"] = getParam(r, "key")
 		break
+	case Api_GetRecordByHash:
+		req["Hash"] = getParam(r, "hash")
+		break
+	case Api_GetRecordByFileHash:
+		req["Hash"] = getParam(r, "hash")
+		break
 	case Api_OauthServerUrl:
 	case Api_NoticeServerUrl:
 	case Api_NoticeServerState:
@@ -292,7 +306,7 @@ func (rt *restServer) getParams(r *http.Request, url string, req map[string]inte
 }
 func (rt *restServer) initGetHandler() {
 
-	for k, _ := range rt.getMap {
+	for k := range rt.getMap {
 		rt.router.Get(k, func(w http.ResponseWriter, r *http.Request) {
 
 			var req = make(map[string]interface{})
@@ -321,7 +335,7 @@ func (rt *restServer) initGetHandler() {
 	}
 }
 func (rt *restServer) initPostHandler() {
-	for k, _ := range rt.postMap {
+	for k := range rt.postMap {
 		rt.router.Post(k, func(w http.ResponseWriter, r *http.Request) {
 
 			body, _ := ioutil.ReadAll(r.Body)
@@ -357,7 +371,7 @@ func (rt *restServer) initPostHandler() {
 		})
 	}
 	//Options
-	for k, _ := range rt.postMap {
+	for k := range rt.postMap {
 		rt.router.Options(k, func(w http.ResponseWriter, r *http.Request) {
 			rt.write(w, []byte{})
 		})
