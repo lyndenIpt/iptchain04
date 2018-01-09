@@ -4,20 +4,20 @@ import (
 	"os"
 	"sort"
 
-	_ "DNA/cli"
-	"DNA/cli/asset"
-	"DNA/cli/bookkeeper"
-	. "DNA/cli/common"
-	"DNA/cli/consensus"
-	"DNA/cli/data"
-	"DNA/cli/debug"
-	"DNA/cli/info"
-	"DNA/cli/multisig"
-	"DNA/cli/privpayload"
-	"DNA/cli/recover"
-	"DNA/cli/smartcontract"
-	"DNA/cli/test"
-	"DNA/cli/wallet"
+	_ "IPT/cli"
+	"IPT/cli/asset"
+	"IPT/cli/bookkeeper"
+	. "IPT/cli/common"
+	"IPT/cli/consensus"
+	"IPT/cli/data"
+	"IPT/cli/debug"
+	"IPT/cli/info"
+	"IPT/cli/multisig"
+	"IPT/cli/privpayload"
+	"IPT/cli/recover"
+	"IPT/cli/smartcontract"
+	"IPT/cli/test"
+	"IPT/cli/wallet"
 
 	"github.com/urfave/cli"
 )
@@ -29,7 +29,7 @@ func main() {
 	app.Name = "nodectl"
 	app.Version = Version
 	app.HelpName = "nodectl"
-	app.Usage = "command line tool for DNA blockchain"
+	app.Usage = "command line tool for IPT blockchain"
 	app.UsageText = "nodectl [global options] command [command options] [args]"
 	app.HideHelp = false
 	app.HideVersion = false

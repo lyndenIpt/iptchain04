@@ -1,8 +1,8 @@
 package common
 
 import (
-	"DNA/common/log"
-	. "DNA/errors"
+	"IPT/common/log"
+	. "IPT/errors"
 	"bytes"
 	"crypto/sha256"
 	"encoding/binary"

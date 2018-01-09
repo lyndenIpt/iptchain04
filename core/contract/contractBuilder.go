@@ -1,13 +1,13 @@
 package contract
 
 import (
-	. "DNA/common"
-	pg "DNA/core/contract/program"
-	"DNA/crypto"
-	. "DNA/errors"
+	. "IPT/common"
+	pg "IPT/core/contract/program"
+	"IPT/crypto"
+	. "IPT/errors"
 	"math/big"
 	"sort"
-	"DNA/vm/avm"
+	"IPT/vm/avm"
 )
 
 //create a Single Singature contract for owner

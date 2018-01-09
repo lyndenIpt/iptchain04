@@ -1,12 +1,12 @@
 package contract
 
 import (
-	. "DNA/common"
-	"DNA/common/log"
-	pg "DNA/core/contract/program"
-	sig "DNA/core/signature"
-	"DNA/crypto"
-	_ "DNA/errors"
+	. "IPT/common"
+	"IPT/common/log"
+	pg "IPT/core/contract/program"
+	sig "IPT/core/signature"
+	"IPT/crypto"
+	_ "IPT/errors"
 	"errors"
 	"math/big"
 	"sort"

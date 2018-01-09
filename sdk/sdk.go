@@ -7,13 +7,13 @@ import (
 	"sort"
 	"strconv"
 
-	"DNA/account"
-	. "DNA/common"
-	"DNA/common/config"
-	. "DNA/core/asset"
-	"DNA/core/contract"
-	"DNA/core/signature"
-	"DNA/core/transaction"
+	"IPT/account"
+	. "IPT/common"
+	"IPT/common/config"
+	. "IPT/core/asset"
+	"IPT/core/contract"
+	"IPT/core/signature"
+	"IPT/core/transaction"
 )
 
 type BatchOut struct {

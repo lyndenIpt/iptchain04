@@ -1,11 +1,11 @@
 package avm
 
 import (
-	"DNA/crypto"
-	. "DNA/errors"
-	"DNA/common/log"
+	"IPT/crypto"
+	. "IPT/errors"
+	"IPT/common/log"
 	"errors"
-	"DNA/common"
+	"IPT/common"
 )
 
 

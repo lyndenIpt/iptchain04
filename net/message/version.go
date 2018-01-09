@@ -1,11 +1,11 @@
 package message
 
 import (
-	"DNA/common/config"
-	"DNA/common/log"
-	"DNA/core/ledger"
-	"DNA/crypto"
-	. "DNA/net/protocol"
+	"IPT/common/config"
+	"IPT/common/log"
+	"IPT/core/ledger"
+	"IPT/crypto"
+	. "IPT/net/protocol"
 	"bytes"
 	"crypto/sha256"
 	"encoding/binary"

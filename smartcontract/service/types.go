@@ -1,13 +1,13 @@
 package service
 
 import (
-	. "DNA/common"
-	"DNA/core/asset"
-	"DNA/core/ledger"
-	"DNA/core/transaction"
-	. "DNA/net/httpjsonrpc"
-	"DNA/net/httprestful/common"
-	"DNA/smartcontract/states"
+	. "IPT/common"
+	"IPT/core/asset"
+	"IPT/core/ledger"
+	"IPT/core/transaction"
+	. "IPT/net/httpjsonrpc"
+	"IPT/net/httprestful/common"
+	"IPT/smartcontract/states"
 )
 
 type AccountInfo struct {

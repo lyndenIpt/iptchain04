@@ -1,13 +1,13 @@
 package contract
 
 import (
-	. "DNA/common"
-	"DNA/common/serialization"
-	. "DNA/errors"
+	. "IPT/common"
+	"IPT/common/serialization"
+	. "IPT/errors"
 	"bytes"
 	"errors"
 	"io"
-	"DNA/vm/avm"
+	"IPT/vm/avm"
 )
 
 //Contract address is the hash of contract program .

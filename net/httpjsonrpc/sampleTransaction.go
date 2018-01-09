@@ -1,18 +1,18 @@
 package httpjsonrpc
 
 import (
-	. "DNA/account"
-	. "DNA/common"
-	"DNA/common/log"
-	. "DNA/core/asset"
-	"DNA/core/contract"
-	"DNA/core/signature"
-	"DNA/core/transaction"
+	. "IPT/account"
+	. "IPT/common"
+	"IPT/common/log"
+	. "IPT/core/asset"
+	"IPT/core/contract"
+	"IPT/core/signature"
+	"IPT/core/transaction"
 	"strconv"
 )
 
 const (
-	ASSETPREFIX = "DNA"
+	ASSETPREFIX = "IPT"
 )
 
 func NewRegTx(rand string, index int, admin, issuer *Account) *transaction.Transaction {

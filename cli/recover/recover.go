@@ -5,9 +5,9 @@ import (
 	"os"
 	"time"
 
-	"DNA/account"
-	. "DNA/cli/common"
-	"DNA/common/password"
+	"IPT/account"
+	. "IPT/cli/common"
+	"IPT/common/password"
 	"github.com/urfave/cli"
 )
 

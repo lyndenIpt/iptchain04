@@ -1,11 +1,11 @@
 package payload
 
 import (
-	. "DNA/core/code"
-	"DNA/common/serialization"
+	. "IPT/core/code"
+	"IPT/common/serialization"
 	"io"
-	"DNA/smartcontract/types"
-	"DNA/common"
+	"IPT/smartcontract/types"
+	"IPT/common"
 )
 
 type DeployCode struct {

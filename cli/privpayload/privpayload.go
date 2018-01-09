@@ -1,14 +1,14 @@
 package privpayload
 
 import (
-	"DNA/account"
-	. "DNA/cli/common"
-	"DNA/core/contract"
-	"DNA/core/signature"
-	"DNA/core/transaction"
-	"DNA/core/transaction/payload"
-	"DNA/crypto"
-	"DNA/net/httpjsonrpc"
+	"IPT/account"
+	. "IPT/cli/common"
+	"IPT/core/contract"
+	"IPT/core/signature"
+	"IPT/core/transaction"
+	"IPT/core/transaction/payload"
+	"IPT/crypto"
+	"IPT/net/httpjsonrpc"
 	"bytes"
 	"encoding/hex"
 	"encoding/json"

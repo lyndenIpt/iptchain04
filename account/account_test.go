@@ -1,7 +1,7 @@
 package account
 
 import (
-	"DNA/crypto"
+	"IPT/crypto"
 	"fmt"
 	"os"
 	"path"

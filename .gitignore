@@ -7,7 +7,7 @@ idea/
 build/
 *.patch
 .idea/
-GoOnchain.iml
+GoIPTChain.iml
 .log
 .DS_Store
 *.orig

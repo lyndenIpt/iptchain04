@@ -2,8 +2,8 @@ package states
 
 import (
 	"io"
-	"DNA/common/serialization"
-	"DNA/errors"
+	"IPT/common/serialization"
+	"IPT/errors"
 )
 
 type StateBase struct {

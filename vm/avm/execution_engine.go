@@ -1,12 +1,12 @@
 package avm
 
 import (
-	"DNA/vm/avm/interfaces"
+	"IPT/vm/avm/interfaces"
 	"io"
 	_ "math/big"
 	_ "sort"
-	. "DNA/vm/avm/errors"
-	"DNA/common"
+	. "IPT/vm/avm/errors"
+	"IPT/common"
 )
 
 const (

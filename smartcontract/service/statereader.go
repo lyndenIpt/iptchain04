@@ -1,16 +1,16 @@
 package service
 
 import (
-	"DNA/common"
-	"DNA/core/contract"
-	"DNA/core/ledger"
-	"DNA/core/signature"
-	"DNA/core/transaction"
-	"DNA/crypto"
-	"DNA/errors"
-	"DNA/smartcontract/states"
-	"DNA/vm/avm"
-	"DNA/vm/avm/types"
+	"IPT/common"
+	"IPT/core/contract"
+	"IPT/core/ledger"
+	"IPT/core/signature"
+	"IPT/core/transaction"
+	"IPT/crypto"
+	"IPT/errors"
+	"IPT/smartcontract/states"
+	"IPT/vm/avm"
+	"IPT/vm/avm/types"
 	"fmt"
 	"math/big"
 )
@@ -83,11 +83,11 @@ func NewStateReader() *StateReader {
 	return &stateReader
 }
 
-func (s *StateReader) Register(methodName string, handler func(*avm.ExecutionEngine) (bool, error)) bool {
-	if _, ok := s.serviceMap[methodName]; ok {
+func (s *StateReader) Register(methoIPTme string, handler func(*avm.ExecutionEngine) (bool, error)) bool {
+	if _, ok := s.serviceMap[methoIPTme]; ok {
 		return false
 	}
-	s.serviceMap[methodName] = handler
+	s.serviceMap[methoIPTme] = handler
 	return true
 }
 

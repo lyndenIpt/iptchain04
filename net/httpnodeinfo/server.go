@@ -1,9 +1,9 @@
 package httpnodeinfo
 
 import (
-	"DNA/common/config"
-	"DNA/core/ledger"
-	. "DNA/net/protocol"
+	"IPT/common/config"
+	"IPT/core/ledger"
+	. "IPT/net/protocol"
 	"fmt"
 	"html/template"
 	"net/http"

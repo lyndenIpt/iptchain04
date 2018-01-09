@@ -1,11 +1,11 @@
 package main
 
 import (
-	"DNA/crypto"
-	"DNA/core/ledger"
-	"DNA/core/store"
-	."DNA/common"
-	"DNA/common/log"
+	"IPT/crypto"
+	"IPT/core/ledger"
+	"IPT/core/store"
+	."IPT/common"
+	"IPT/common/log"
 	"encoding/hex"
 	"os"
 	"fmt"

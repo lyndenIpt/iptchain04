@@ -3,7 +3,7 @@ package avm
 import (
 	"bytes"
 	"encoding/binary"
-	"DNA/common"
+	"IPT/common"
 )
 
 type ParamsBuilder struct {

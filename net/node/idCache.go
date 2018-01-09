@@ -1,8 +1,8 @@
 package node
 
 import (
-	"DNA/common"
-	"DNA/net/protocol"
+	"IPT/common"
+	"IPT/net/protocol"
 	"sync"
 )
 

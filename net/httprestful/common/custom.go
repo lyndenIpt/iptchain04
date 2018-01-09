@@ -1,13 +1,13 @@
 package common
 
 import (
-	. "DNA/common"
-	"DNA/core/ledger"
-	tx "DNA/core/transaction"
-	"DNA/core/transaction/payload"
-	. "DNA/errors"
-	. "DNA/net/httpjsonrpc"
-	Err "DNA/net/httprestful/error"
+	. "IPT/common"
+	"IPT/core/ledger"
+	tx "IPT/core/transaction"
+	"IPT/core/transaction/payload"
+	. "IPT/errors"
+	. "IPT/net/httpjsonrpc"
+	Err "IPT/net/httprestful/error"
 	"bytes"
 	"encoding/json"
 	"time"

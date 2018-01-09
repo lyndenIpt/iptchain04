@@ -1,8 +1,8 @@
 package payload
 
 import (
-	"DNA/common/serialization"
-	"DNA/crypto"
+	"IPT/common/serialization"
+	"IPT/crypto"
 	"crypto/ecdsa"
 	"crypto/elliptic"
 	"crypto/rand"

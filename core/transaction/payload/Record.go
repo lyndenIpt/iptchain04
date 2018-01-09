@@ -1,8 +1,8 @@
 package payload
 
 import (
-	"DNA/common/serialization"
-	. "DNA/errors"
+	"IPT/common/serialization"
+	. "IPT/errors"
 	"errors"
 	"io"
 )

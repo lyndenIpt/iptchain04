@@ -3,8 +3,8 @@ package asset
 import (
 	"io"
 
-	. "DNA/common"
-	"DNA/common/serialization"
+	. "IPT/common"
+	"IPT/common/serialization"
 )
 
 type LockAsset struct {

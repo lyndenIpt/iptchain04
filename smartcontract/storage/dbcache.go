@@ -1,9 +1,9 @@
 package storage
 
 import (
-	"DNA/core/store"
-	"DNA/smartcontract/states"
-	"DNA/common"
+	"IPT/core/store"
+	"IPT/smartcontract/states"
+	"IPT/common"
 	"math/big"
 )
 

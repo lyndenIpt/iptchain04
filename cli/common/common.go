@@ -7,8 +7,8 @@ import (
 	"os"
 	"strconv"
 
-	"DNA/common/config"
-	"DNA/common/password"
+	"IPT/common/config"
+	"IPT/common/password"
 
 	"github.com/urfave/cli"
 )

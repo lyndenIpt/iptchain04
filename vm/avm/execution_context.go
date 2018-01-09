@@ -1,9 +1,9 @@
 package avm
 
 import (
-	"DNA/vm/avm/utils"
+	"IPT/vm/avm/utils"
 	"io"
-	"DNA/vm/avm/types"
+	"IPT/vm/avm/types"
 )
 
 type ExecutionContext struct {

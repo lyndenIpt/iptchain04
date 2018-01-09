@@ -1,13 +1,13 @@
 package states
 
 import (
-	"DNA/common"
-	"DNA/crypto"
+	"IPT/common"
+	"IPT/crypto"
 	"io"
-	"DNA/common/serialization"
-	. "DNA/errors"
+	"IPT/common/serialization"
+	. "IPT/errors"
 	"bytes"
-	"DNA/core/asset"
+	"IPT/core/asset"
 )
 
 type AssetState struct {

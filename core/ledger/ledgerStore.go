@@ -1,12 +1,12 @@
 package ledger
 
 import (
-	. "DNA/common"
-	"DNA/core/account"
-	. "DNA/core/asset"
-	tx "DNA/core/transaction"
-	"DNA/crypto"
-	"DNA/smartcontract/states"
+	. "IPT/common"
+	"IPT/core/account"
+	. "IPT/core/asset"
+	tx "IPT/core/transaction"
+	"IPT/crypto"
+	"IPT/smartcontract/states"
 )
 
 // ILedgerStore provides func with store package.

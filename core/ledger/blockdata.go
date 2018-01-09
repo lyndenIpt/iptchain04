@@ -1,11 +1,11 @@
 package ledger
 
 import (
-	. "DNA/common"
-	"DNA/common/serialization"
-	"DNA/core/contract/program"
-	sig "DNA/core/signature"
-	. "DNA/errors"
+	. "IPT/common"
+	"IPT/common/serialization"
+	"IPT/core/contract/program"
+	sig "IPT/core/signature"
+	. "IPT/errors"
 	"crypto/sha256"
 	"errors"
 	"io"

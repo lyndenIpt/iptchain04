@@ -2,8 +2,8 @@ package states
 
 import (
 	"io"
-	"DNA/vm/avm/interfaces"
-	"DNA/core/store"
+	"IPT/vm/avm/interfaces"
+	"IPT/core/store"
 	"bytes"
 )
 

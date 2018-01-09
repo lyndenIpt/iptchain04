@@ -1,10 +1,10 @@
 package program
 
 import (
-	. "DNA/common"
+	. "IPT/common"
 	"bytes"
 	"math/big"
-	"DNA/vm/avm"
+	"IPT/vm/avm"
 )
 
 type ProgramBuilder struct {

@@ -1,14 +1,14 @@
 package common
 
 import (
-	. "DNA/common"
-	"DNA/core/ledger"
-	tx "DNA/core/transaction"
-	. "DNA/errors"
-	. "DNA/net/httpjsonrpc"
-	Err "DNA/net/httprestful/error"
-	. "DNA/net/protocol"
-	"DNA/smartcontract/states"
+	. "IPT/common"
+	"IPT/core/ledger"
+	tx "IPT/core/transaction"
+	. "IPT/errors"
+	. "IPT/net/httpjsonrpc"
+	Err "IPT/net/httprestful/error"
+	. "IPT/net/protocol"
+	"IPT/smartcontract/states"
 	"bytes"
 	"fmt"
 	"strconv"

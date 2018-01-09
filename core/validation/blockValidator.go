@@ -1,9 +1,9 @@
 package validation
 
 import (
-	"DNA/core/ledger"
-	tx "DNA/core/transaction"
-	. "DNA/errors"
+	"IPT/core/ledger"
+	tx "IPT/core/transaction"
+	. "IPT/errors"
 	"errors"
 	"fmt"
 )

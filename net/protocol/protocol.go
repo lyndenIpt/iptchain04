@@ -1,12 +1,12 @@
 package protocol
 
 import (
-	"DNA/common"
-	"DNA/core/ledger"
-	"DNA/core/transaction"
-	"DNA/crypto"
-	. "DNA/errors"
-	"DNA/events"
+	"IPT/common"
+	"IPT/core/ledger"
+	"IPT/core/transaction"
+	"IPT/crypto"
+	. "IPT/errors"
+	"IPT/events"
 	"bytes"
 	"encoding/binary"
 	"time"

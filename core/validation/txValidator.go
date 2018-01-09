@@ -5,15 +5,15 @@ import (
 	"fmt"
 	"math"
 
-	. "DNA/common"
-	"DNA/common/config"
-	"DNA/common/log"
-	"DNA/core/asset"
-	"DNA/core/ledger"
-	tx "DNA/core/transaction"
-	"DNA/core/transaction/payload"
-	"DNA/crypto"
-	. "DNA/errors"
+	. "IPT/common"
+	"IPT/common/config"
+	"IPT/common/log"
+	"IPT/core/asset"
+	"IPT/core/ledger"
+	tx "IPT/core/transaction"
+	"IPT/core/transaction/payload"
+	"IPT/crypto"
+	. "IPT/errors"
 )
 
 func VerifyTransaction(txn *tx.Transaction) ErrCode {

@@ -1,14 +1,14 @@
 package validation
 
 import (
-	. "DNA/common"
-	sig "DNA/core/signature"
-	"DNA/crypto"
-	. "DNA/errors"
-	"DNA/vm/avm"
+	. "IPT/common"
+	sig "IPT/core/signature"
+	"IPT/crypto"
+	. "IPT/errors"
+	"IPT/vm/avm"
 	"errors"
-	"DNA/vm/avm/interfaces"
-	"DNA/common"
+	"IPT/vm/avm/interfaces"
+	"IPT/common"
 )
 
 func VerifySignableData(signableData sig.SignableData) (bool, error) {

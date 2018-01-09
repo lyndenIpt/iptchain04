@@ -6,12 +6,12 @@ import (
 	"math/rand"
 	"os"
 
-	"DNA/account"
-	. "DNA/cli/common"
-	. "DNA/common"
-	"DNA/core/transaction"
-	"DNA/net/httpjsonrpc"
-	"DNA/sdk"
+	"IPT/account"
+	. "IPT/cli/common"
+	. "IPT/common"
+	"IPT/core/transaction"
+	"IPT/net/httpjsonrpc"
+	"IPT/sdk"
 
 	"github.com/urfave/cli"
 )
@@ -36,7 +36,7 @@ func parseAssetName(c *cli.Context) string {
 	if name == "" {
 		rbuf := make([]byte, RANDBYTELEN)
 		rand.Read(rbuf)
-		name = "DNA-" + BytesToHexString(rbuf)
+		name = "IPT-" + BytesToHexString(rbuf)
 	}
 
 	return name

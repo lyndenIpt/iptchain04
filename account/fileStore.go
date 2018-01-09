@@ -10,11 +10,11 @@ import (
 	"os"
 	"sync"
 
-	. "DNA/common"
-	"DNA/common/serialization"
-	ct "DNA/core/contract"
-	"DNA/core/transaction"
-	. "DNA/errors"
+	. "IPT/common"
+	"IPT/common/serialization"
+	ct "IPT/core/contract"
+	"IPT/core/transaction"
+	. "IPT/errors"
 )
 
 const (

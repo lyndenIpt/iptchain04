@@ -2,12 +2,12 @@ package states
 
 import (
 	"io"
-	. "DNA/errors"
-	"DNA/core/code"
+	. "IPT/errors"
+	"IPT/core/code"
 	"bytes"
-	"DNA/common/serialization"
-	"DNA/smartcontract/types"
-	"DNA/common"
+	"IPT/common/serialization"
+	"IPT/smartcontract/types"
+	"IPT/common"
 )
 
 type ContractState struct {

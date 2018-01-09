@@ -1,8 +1,8 @@
 package avm
 
 import (
-	"DNA/common/log"
-	. "DNA/vm/avm/errors"
+	"IPT/common/log"
+	. "IPT/vm/avm/errors"
 )
 
 func opNop(e *ExecutionEngine) (VMState, error) {

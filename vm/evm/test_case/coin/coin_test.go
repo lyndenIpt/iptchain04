@@ -2,8 +2,8 @@ package coin
 
 import (
 	"testing"
-	"DNA/vm/evm/test_case"
-	"DNA/client"
+	"IPT/vm/evm/test_case"
+	"IPT/client"
 	"fmt"
 	"math/big"
 )

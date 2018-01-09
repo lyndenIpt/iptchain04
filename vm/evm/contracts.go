@@ -1,10 +1,10 @@
 package evm
 
 import (
-	"DNA/common"
+	"IPT/common"
 	"math/big"
-	. "DNA/vm/evm/common"
-	"DNA/vm/evm/crypto"
+	. "IPT/vm/evm/common"
+	"IPT/vm/evm/crypto"
 	"crypto/sha256"
 	"github.com/golang/crypto/ripemd160"
 )

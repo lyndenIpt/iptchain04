@@ -1,11 +1,11 @@
 package restful
 
 import (
-	. "DNA/common/config"
-	"DNA/common/log"
-	. "DNA/net/httprestful/common"
-	Err "DNA/net/httprestful/error"
-	"DNA/net/httpwebsocket"
+	. "IPT/common/config"
+	"IPT/common/log"
+	. "IPT/net/httprestful/common"
+	Err "IPT/net/httprestful/error"
+	"IPT/net/httpwebsocket"
 	"context"
 	"crypto/tls"
 	"encoding/json"

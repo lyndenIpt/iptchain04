@@ -1,10 +1,10 @@
 package httpjsonrpc
 
 import (
-	. "DNA/common"
-	"DNA/core/asset"
-	. "DNA/core/transaction"
-	"DNA/core/transaction/payload"
+	. "IPT/common"
+	"IPT/core/asset"
+	. "IPT/core/transaction"
+	"IPT/core/transaction/payload"
 	"bytes"
 )
 

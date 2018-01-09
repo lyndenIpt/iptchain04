@@ -2,8 +2,8 @@ package types
 
 import (
 	"math/big"
-	"DNA/vm/avm/interfaces"
-	"DNA/common"
+	"IPT/vm/avm/interfaces"
+	"IPT/common"
 )
 
 type ByteArray struct {

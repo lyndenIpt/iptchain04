@@ -5,11 +5,11 @@ import (
 	"fmt"
 	"os"
 
-	"DNA/account"
-	. "DNA/cli/common"
-	"DNA/common"
-	"DNA/core/transaction"
-	"DNA/net/httpjsonrpc"
+	"IPT/account"
+	. "IPT/cli/common"
+	"IPT/common"
+	"IPT/core/transaction"
+	"IPT/net/httpjsonrpc"
 
 	"github.com/urfave/cli"
 )

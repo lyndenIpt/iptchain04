@@ -4,12 +4,12 @@ import (
 	"testing"
 	"strings"
 	"fmt"
-	"DNA/common"
-	"DNA/vm/evm/abi"
-	"DNA/crypto"
-	"DNA/core/ledger"
-	"DNA/core/store/ChainStore"
-	"DNA/client"
+	"IPT/common"
+	"IPT/vm/evm/abi"
+	"IPT/crypto"
+	"IPT/core/ledger"
+	"IPT/core/store/ChainStore"
+	"IPT/client"
 )
 
 const (

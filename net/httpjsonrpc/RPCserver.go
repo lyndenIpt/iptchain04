@@ -1,8 +1,8 @@
 package httpjsonrpc
 
 import (
-	. "DNA/common/config"
-	"DNA/common/log"
+	. "IPT/common/config"
+	"IPT/common/log"
 	"net/http"
 	"strconv"
 )

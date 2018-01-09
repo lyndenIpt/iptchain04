@@ -1,6 +1,6 @@
 package avm
 
-import "DNA/vm/avm/types"
+import "IPT/vm/avm/types"
 
 type StackItem struct {
 	_object types.StackItemInterface

@@ -1,14 +1,14 @@
 package test_case
 
 import (
-	"DNA/core/ledger"
-	"DNA/crypto"
-	"DNA/core/store/ChainStore"
-	client "DNA/account"
-	"DNA/vm/evm"
+	"IPT/core/ledger"
+	"IPT/crypto"
+	"IPT/core/store/ChainStore"
+	client "IPT/account"
+	"IPT/vm/evm"
 	"strings"
-	"DNA/vm/evm/abi"
-	"DNA/common"
+	"IPT/vm/evm/abi"
+	"IPT/common"
 	"time"
 	"math/big"
 )

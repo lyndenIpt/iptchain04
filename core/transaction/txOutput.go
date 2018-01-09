@@ -1,7 +1,7 @@
 package transaction
 
 import (
-	"DNA/common"
+	"IPT/common"
 	"io"
 	"bytes"
 )

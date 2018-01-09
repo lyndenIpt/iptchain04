@@ -1,14 +1,14 @@
 package transaction
 
 import (
-	. "DNA/common"
-	"DNA/common/log"
-	"DNA/common/serialization"
-	"DNA/core/contract"
-	"DNA/core/contract/program"
-	sig "DNA/core/signature"
-	"DNA/core/transaction/payload"
-	. "DNA/errors"
+	. "IPT/common"
+	"IPT/common/log"
+	"IPT/common/serialization"
+	"IPT/core/contract"
+	"IPT/core/contract/program"
+	sig "IPT/core/signature"
+	"IPT/core/transaction/payload"
+	. "IPT/errors"
 	"bytes"
 	"crypto/sha256"
 	"errors"

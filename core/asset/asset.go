@@ -1,8 +1,8 @@
 package asset
 
 import (
-	"DNA/common/serialization"
-	. "DNA/errors"
+	"IPT/common/serialization"
+	. "IPT/errors"
 	"errors"
 	"io"
 	"bytes"
@@ -25,13 +25,13 @@ const (
 
 type AssetRecordType byte
 
-//onchain DNA is planed to support UTXO and Balance
+//IPTChain IPT is planed to support UTXO and Balance
 const (
 	UTXO    AssetRecordType = 0x00
 	Balance AssetRecordType = 0x01
 )
 
-//define the asset stucture in onchain DNA
+//define the asset stucture in IPTChain IPT
 //registered asset will be assigned to contract address
 type Asset struct {
 	Name        string

@@ -1,13 +1,13 @@
 package transaction
 
 import (
-	"DNA/common"
-	"DNA/core/asset"
-	"DNA/core/code"
-	"DNA/core/contract/program"
-	"DNA/core/transaction/payload"
-	"DNA/crypto"
-	"DNA/smartcontract/types"
+	"IPT/common"
+	"IPT/core/asset"
+	"IPT/core/code"
+	"IPT/core/contract/program"
+	"IPT/core/transaction/payload"
+	"IPT/crypto"
+	"IPT/smartcontract/types"
 )
 
 //initial a new transaction with asset registration payload

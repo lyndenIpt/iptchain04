@@ -1,12 +1,12 @@
 package ChainStore
 
 import (
-	"DNA/smartcontract/storage"
+	"IPT/smartcontract/storage"
 	"bytes"
-	"DNA/smartcontract/states"
-	"DNA/core/store"
+	"IPT/smartcontract/states"
+	"IPT/core/store"
 	"math/big"
-	"DNA/common"
+	"IPT/common"
 )
 
 type DBCache struct {

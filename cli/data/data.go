@@ -1,12 +1,12 @@
 package data
 
 import (
-	"DNA/account"
-	. "DNA/cli/common"
-	"DNA/core/contract"
-	"DNA/core/signature"
-	"DNA/core/transaction"
-	"DNA/net/httpjsonrpc"
+	"IPT/account"
+	. "IPT/cli/common"
+	"IPT/core/contract"
+	"IPT/core/signature"
+	"IPT/core/transaction"
+	"IPT/net/httpjsonrpc"
 	"bytes"
 	"encoding/hex"
 	"fmt"
@@ -141,7 +141,7 @@ func dataAction(c *cli.Context) error {
 		if name == "" {
 			rbuf := make([]byte, 4)
 			rand.Read(rbuf)
-			name = "DNA-" + hex.EncodeToString(rbuf)
+			name = "IPT-" + hex.EncodeToString(rbuf)
 		}
 		//create transaction
 		var tx *transaction.Transaction

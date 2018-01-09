@@ -1,10 +1,10 @@
 package states
 
 import (
-	"DNA/common"
+	"IPT/common"
 	"io"
-	"DNA/common/serialization"
-	. "DNA/errors"
+	"IPT/common/serialization"
+	. "IPT/errors"
 )
 
 type StorageKey struct {

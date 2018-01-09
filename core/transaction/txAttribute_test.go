@@ -9,7 +9,7 @@ import (
 func TestTxAttribute(t *testing.T) {
 	b := new(bytes.Buffer)
 
-	tx := NewTxAttribute(DescriptionUrl, []byte("http:\\www.onchain.com"))
+	tx := NewTxAttribute(DescriptionUrl, []byte("http:\\www.IPTChain.com"))
 	tx.Serialize(b)
 	fmt.Println("Serialize complete")
 

@@ -1,20 +1,20 @@
 package ledger
 
 import (
-	"DNA/common"
-	. "DNA/common"
-	"DNA/core/asset"
-	"DNA/core/contract"
-	tx "DNA/core/transaction"
-	"DNA/crypto"
-	. "DNA/errors"
+	"IPT/common"
+	. "IPT/common"
+	"IPT/core/asset"
+	"IPT/core/contract"
+	tx "IPT/core/transaction"
+	"IPT/crypto"
+	. "IPT/errors"
 	"errors"
 )
 
 var DefaultLedger *Ledger
 var StandbyBookKeepers []*crypto.PubKey
 
-// Ledger - the struct for onchainDNA ledger
+// Ledger - the struct for IPTChainIPT ledger
 type Ledger struct {
 	Blockchain *Blockchain
 	State      *State

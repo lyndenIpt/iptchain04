@@ -1,10 +1,10 @@
 package avm
 
 import (
-	. "DNA/vm/avm/errors"
+	. "IPT/vm/avm/errors"
 	"bytes"
 	"encoding/binary"
-	"DNA/vm/avm/types"
+	"IPT/vm/avm/types"
 )
 
 func validatorPushData4(e *ExecutionEngine) error {

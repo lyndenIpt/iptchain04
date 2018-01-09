@@ -1,10 +1,10 @@
 package payload
 
 import (
-	"DNA/common"
-	"DNA/core/asset"
-	"DNA/crypto"
-	. "DNA/errors"
+	"IPT/common"
+	"IPT/core/asset"
+	"IPT/crypto"
+	. "IPT/errors"
 	"io"
 )
 

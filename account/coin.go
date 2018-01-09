@@ -3,8 +3,8 @@ package account
 import (
 	"io"
 
-	"DNA/common/serialization"
-	"DNA/core/transaction"
+	"IPT/common/serialization"
+	"IPT/core/transaction"
 )
 
 type AddressType byte

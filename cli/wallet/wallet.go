@@ -11,12 +11,12 @@ import (
 	"syscall"
 	"time"
 
-	"DNA/account"
-	. "DNA/cli/common"
-	. "DNA/common"
-	"DNA/common/password"
-	"DNA/crypto"
-	"DNA/events/signalset"
+	"IPT/account"
+	. "IPT/cli/common"
+	. "IPT/common"
+	"IPT/common/password"
+	"IPT/crypto"
+	"IPT/events/signalset"
 
 	"github.com/urfave/cli"
 )

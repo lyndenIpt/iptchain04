@@ -1,8 +1,8 @@
 package dbft
 
 import (
-	"DNA/common/log"
-	ser "DNA/common/serialization"
+	"IPT/common/log"
+	ser "IPT/common/serialization"
 	"bytes"
 	"errors"
 	"io"

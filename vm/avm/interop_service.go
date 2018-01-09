@@ -1,8 +1,8 @@
 package avm
 
 import (
-	"DNA/common/log"
-	. "DNA/vm/avm/errors"
+	"IPT/common/log"
+	. "IPT/vm/avm/errors"
 )
 
 type IInteropService interface {
@@ -24,11 +24,11 @@ func NewInteropService() *InteropService {
 	return &i
 }
 
-func (is *InteropService) Register(methodName string, handler func(*ExecutionEngine) (bool, error)) bool {
-	if _, ok := is.serviceMap[methodName]; ok {
+func (is *InteropService) Register(methoIPTme string, handler func(*ExecutionEngine) (bool, error)) bool {
+	if _, ok := is.serviceMap[methoIPTme]; ok {
 		return false
 	}
-	is.serviceMap[methodName] = handler
+	is.serviceMap[methoIPTme] = handler
 	return true
 }
 
@@ -44,9 +44,9 @@ func (i *InteropService) GetServiceMap() map[string]func(*ExecutionEngine) (bool
 	return i.serviceMap
 }
 
-func (i *InteropService) Invoke(methodName string, engine *ExecutionEngine) (bool, error) {
-	if v, ok := i.serviceMap[methodName]; ok {
-		log.Trace("Invoke MethodName:", methodName)
+func (i *InteropService) Invoke(methoIPTme string, engine *ExecutionEngine) (bool, error) {
+	if v, ok := i.serviceMap[methoIPTme]; ok {
+		log.Trace("Invoke MethoIPTme:", methoIPTme)
 		return v(engine)
 	}
 	return false, ErrNotSupportService

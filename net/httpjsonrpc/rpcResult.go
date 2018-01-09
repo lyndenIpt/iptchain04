@@ -1,25 +1,25 @@
 package httpjsonrpc
 
 var (
-	DnaRpcInvalidHash        = responsePacking("invalid hash")
-	DnaRpcInvalidBlock       = responsePacking("invalid block")
-	DnaRpcInvalidTransaction = responsePacking("invalid transaction")
-	DnaRpcInvalidParameter   = responsePacking("invalid parameter")
+	IPTRpcInvalidHash        = responsePacking("invalid hash")
+	IPTRpcInvalidBlock       = responsePacking("invalid block")
+	IPTRpcInvalidTransaction = responsePacking("invalid transaction")
+	IPTRpcInvalidParameter   = responsePacking("invalid parameter")
 
-	DnaRpcUnknownBlock       = responsePacking("unknown block")
-	DnaRpcUnknownTransaction = responsePacking("unknown transaction")
+	IPTRpcUnknownBlock       = responsePacking("unknown block")
+	IPTRpcUnknownTransaction = responsePacking("unknown transaction")
 
-	DnaRpcNil           = responsePacking(nil)
-	DnaRpcUnsupported   = responsePacking("Unsupported")
-	DnaRpcInternalError = responsePacking("internal error")
-	DnaRpcIOError       = responsePacking("internal IO error")
-	DnaRpcAPIError      = responsePacking("internal API error")
-	DnaRpcSuccess       = responsePacking(true)
-	DnaRpcFailed        = responsePacking(false)
+	IPTRpcNil           = responsePacking(nil)
+	IPTRpcUnsupported   = responsePacking("Unsupported")
+	IPTRpcInternalError = responsePacking("internal error")
+	IPTRpcIOError       = responsePacking("internal IO error")
+	IPTRpcAPIError      = responsePacking("internal API error")
+	IPTRpcSuccess       = responsePacking(true)
+	IPTRpcFailed        = responsePacking(false)
 
 	// error code for wallet
-	DnaRpcWalletAlreadyExists = responsePacking("wallet already exist")
-	DnaRpcWalletNotExists     = responsePacking("wallet doesn't exist")
+	IPTRpcWalletAlreadyExists = responsePacking("wallet already exist")
+	IPTRpcWalletNotExists     = responsePacking("wallet doesn't exist")
 
-	DnaRpc = responsePacking
+	IPTRpc = responsePacking
 )

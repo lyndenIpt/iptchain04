@@ -1,15 +1,15 @@
 package dbft
 
 import (
-	cl "DNA/account"
-	. "DNA/common"
-	"DNA/common/log"
-	ser "DNA/common/serialization"
-	"DNA/core/ledger"
-	tx "DNA/core/transaction"
-	"DNA/crypto"
-	"DNA/net"
-	msg "DNA/net/message"
+	cl "IPT/account"
+	. "IPT/common"
+	"IPT/common/log"
+	ser "IPT/common/serialization"
+	"IPT/core/ledger"
+	tx "IPT/core/transaction"
+	"IPT/crypto"
+	"IPT/net"
+	msg "IPT/net/message"
 	"fmt"
 	"sync"
 )

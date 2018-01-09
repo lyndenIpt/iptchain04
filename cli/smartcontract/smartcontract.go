@@ -1,16 +1,16 @@
 package smartcontract
 
 import (
-	"DNA/account"
-	. "DNA/cli/common"
-	"DNA/common"
-	"DNA/common/password"
-	"DNA/core/code"
-	"DNA/core/contract"
-	"DNA/core/signature"
-	"DNA/core/transaction"
-	httpjsonrpc "DNA/net/httpjsonrpc"
-	"DNA/smartcontract/types"
+	"IPT/account"
+	. "IPT/cli/common"
+	"IPT/common"
+	"IPT/common/password"
+	"IPT/core/code"
+	"IPT/core/contract"
+	"IPT/core/signature"
+	"IPT/core/transaction"
+	httpjsonrpc "IPT/net/httpjsonrpc"
+	"IPT/smartcontract/types"
 	"bytes"
 	"encoding/hex"
 	"fmt"
@@ -78,7 +78,7 @@ func makeDeployContractTransaction(signer *account.Account, codeStr string, lang
 	}
 	fc.CodeHash()
 
-	tx, err := transaction.NewDeployTransaction(fc, signer.ProgramHash, "DNA", "1.0", "DNA user", "user@onchain.com", "test uint", types.LangType(byte(language)))
+	tx, err := transaction.NewDeployTransaction(fc, signer.ProgramHash, "IPT", "1.0", "IPT user", "user@IPTChain.com", "test uint", types.LangType(byte(language)))
 	if err != nil {
 		return "Deploy smartcontract fail!", err
 	}

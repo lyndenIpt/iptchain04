@@ -3,9 +3,9 @@ package evm
 import (
 	"math/big"
 	"fmt"
-	"DNA/vm/evm/common"
-	"DNA/vm/evm/crypto"
-	. "DNA/common"
+	"IPT/vm/evm/common"
+	"IPT/vm/evm/crypto"
+	. "IPT/common"
 )
 
 var (

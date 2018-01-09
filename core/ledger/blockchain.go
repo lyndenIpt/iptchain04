@@ -1,12 +1,12 @@
 package ledger
 
 import (
-	. "DNA/common"
-	"DNA/common/log"
-	tx "DNA/core/transaction"
-	"DNA/crypto"
-	. "DNA/errors"
-	"DNA/events"
+	. "IPT/common"
+	"IPT/common/log"
+	tx "IPT/core/transaction"
+	"IPT/crypto"
+	. "IPT/errors"
+	"IPT/events"
 	"sync"
 )
 

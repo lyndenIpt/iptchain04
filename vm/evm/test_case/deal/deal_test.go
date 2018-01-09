@@ -2,8 +2,8 @@ package deal
 
 import (
 	"testing"
-	"DNA/vm/evm/test_case"
-	"DNA/common"
+	"IPT/vm/evm/test_case"
+	"IPT/common"
 	"fmt"
 )
 

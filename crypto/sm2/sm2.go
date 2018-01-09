@@ -1,8 +1,8 @@
 package sm2
 
 import (
-	"DNA/crypto/sm3"
-	"DNA/crypto/util"
+	"IPT/crypto/sm3"
+	"IPT/crypto/util"
 	"crypto/aes"
 	"crypto/cipher"
 	"crypto/elliptic"

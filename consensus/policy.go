@@ -1,7 +1,7 @@
 package consensus
 
 import (
-	. "DNA/common"
+	. "IPT/common"
 )
 type Policy struct {
 	PolicyLevel PolicyLevel

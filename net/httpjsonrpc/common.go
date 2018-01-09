@@ -1,13 +1,13 @@
 package httpjsonrpc
 
 import (
-	. "DNA/common"
-	"DNA/common/log"
-	"DNA/consensus/dbft"
-	. "DNA/core/transaction"
-	tx "DNA/core/transaction"
-	. "DNA/errors"
-	. "DNA/net/protocol"
+	. "IPT/common"
+	"IPT/common/log"
+	"IPT/consensus/dbft"
+	. "IPT/core/transaction"
+	tx "IPT/core/transaction"
+	. "IPT/errors"
+	. "IPT/net/protocol"
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
